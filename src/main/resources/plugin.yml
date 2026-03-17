@@ -1,0 +1,5 @@
+name: roseStackerVanillew
+version: '1.0'
+main: plugin.roseStackerVanillew.RoseStackerVanillew
+api-version: '1.21'
+authors: [ ZzPowerTechzZ ]
