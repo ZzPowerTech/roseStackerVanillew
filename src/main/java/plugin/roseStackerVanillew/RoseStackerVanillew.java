@@ -71,14 +71,27 @@ public final class RoseStackerVanillew extends JavaPlugin {
     private void applyRuntimeConfig() {
         Set<String> blockedWorlds = this.loadBlockedWorlds();
         boolean debugBlockedStack = getConfig().getBoolean("debug.blocked-stack", false);
+        boolean chunkLimitEnabled = getConfig().getBoolean("limits.chunk-living-entities.enabled", true);
+        int maxLivingEntitiesPerChunk = Math.max(1, getConfig().getInt("limits.chunk-living-entities.max", 24));
 
         if (this.activeListener != null) {
             HandlerList.unregisterAll(this.activeListener);
         }
 
-        this.activeListener = new VanillewMobStackListener(this, blockedWorlds, debugBlockedStack);
+        this.activeListener = new VanillewMobStackListener(
+                this,
+                blockedWorlds,
+                debugBlockedStack,
+                chunkLimitEnabled,
+                maxLivingEntitiesPerChunk
+        );
         getServer().getPluginManager().registerEvents(this.activeListener, this);
-        getLogger().info("Bloqueio de stack de mobs ativado para mundos: " + blockedWorlds + ". Debug: " + debugBlockedStack);
+        getLogger().info(
+                "Bloqueio de stack de mobs ativado para mundos: " + blockedWorlds
+                        + ". Debug: " + debugBlockedStack
+                        + ". Limite por chunk ativo: " + chunkLimitEnabled
+                        + " (max=" + maxLivingEntitiesPerChunk + ")"
+        );
     }
 
     @Override

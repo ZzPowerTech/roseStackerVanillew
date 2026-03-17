@@ -6,10 +6,10 @@ authors: [ ZzPowerTechzZ ]
 softdepend: [ RoseStacker ]
 commands:
   rsv:
-	description: Recarrega a configuracao do plugin.
-	usage: /rsv reload
-	permission: rosestackervanillew.reload
+    description: Recarrega a configuracao do plugin.
+    usage: /rsv reload
+    permission: rosestackervanillew.reload
 permissions:
   rosestackervanillew.reload:
-	description: Permite recarregar o config.yml do RoseStackerVanillew.
-	default: op
+    description: Permite recarregar o config.yml do RoseStackerVanillew.
+    default: op

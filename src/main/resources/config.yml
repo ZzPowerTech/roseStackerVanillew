@@ -6,3 +6,9 @@ blocked-worlds:
 debug:
   blocked-stack: false
 
+# Hard cap for physical living entities per chunk in blocked worlds.
+limits:
+  chunk-living-entities:
+    enabled: true
+    max: 24
+
