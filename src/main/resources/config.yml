@@ -1,0 +1,8 @@
+# Worlds where RoseStacker mob/entity stacking will be blocked.
+blocked-worlds:
+  - vanillew
+
+# Optional debug logs for each blocked mob stack event.
+debug:
+  blocked-stack: false
+

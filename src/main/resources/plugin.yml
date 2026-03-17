@@ -3,3 +3,13 @@ version: '1.0'
 main: plugin.roseStackerVanillew.RoseStackerVanillew
 api-version: '1.21'
 authors: [ ZzPowerTechzZ ]
+softdepend: [ RoseStacker ]
+commands:
+  rsv:
+	description: Recarrega a configuracao do plugin.
+	usage: /rsv reload
+	permission: rosestackervanillew.reload
+permissions:
+  rosestackervanillew.reload:
+	description: Permite recarregar o config.yml do RoseStackerVanillew.
+	default: op

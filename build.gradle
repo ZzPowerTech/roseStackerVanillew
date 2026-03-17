@@ -12,10 +12,15 @@ repositories {
         name = "papermc-repo"
         url = "https://repo.papermc.io/repository/maven-public/"
     }
+    maven {
+        name = "rosewood-public"
+        url = "https://repo.rosewooddev.io/repository/public/"
+    }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
+    compileOnly("dev.rosewood:rosestacker:1.5.39")
 }
 
 tasks {
